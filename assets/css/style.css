@@ -1,0 +1,293 @@
+
+#subSnackBar {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 100%;
+text-shadow: 3px 5px 5px;
+}
+.ui.inverted.accordion{
+	width: 100%;
+	padding:10%;
+}
+
+
+/*------START logibackground-color: #1b1c1d;n & signup.html-----*/
+body {
+background: url('http://www.imagestowallpapers.com/wp-content/uploads/2015/12/Background-Image-CSS4.jpg') fixed;
+background-size: cover;
+padding: 0;
+margin: 0;
+}
+h1 {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 300%;
+/*margin-top: 5%;*/
+text-shadow: 3px 5px 5px white;
+}
+.form-holder {
+background: rgba(255, 255, 255, 0.2);
+margin-top: 10%;
+border-radius: 3px;
+}
+.form-head {
+font-size: 30px;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: #fff;
+text-shadow: 0 0 30px #000;
+margin: 15px auto 30px auto;
+}
+.remember-me {
+text-align: left;
+}
+.signUp {
+color: black;
+}
+#logonButton{
+display: flex;
+justify-content: center;
+}
+.slogan{
+font-size: 18px;
+text-align: center;
+}
+.bentoHead {
+font-size: 45px;
+display: flex;
+justify-content: center;
+}
+#welcomeText {
+color: black !important;
+text-align: center;
+}
+/*------Start main-stack.html-----*/
+.ui.page.grid {
+opacity: 0.2px;
+display: flex;
+justify-content: center;
+justify-content: space-around;
+}
+#video-div {
+display: flex;
+flex-wrap: wrap;
+padding: 10px;
+}
+.ui.container {
+margin-bottom: 10%;
+}
+/*------Star snackable------*/
+#savedFavorites {
+float: right;
+}
+.material-icons {
+position: absolute;
+}
+.ui.secondary.inverted.pointing.menu .item {
+color: black !important;
+}
+.ui.secondary.inverted.pointing.menu {
+border-width: 2px;
+border-radius: 3.5px;
+background: rgba(255, 255, 255, 0.2);
+background-color: #f6f6f6;
+opacity: 0.8;
+}
+
+.togglePic {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/*body.pushable>.pusher {
+background: url('http://wallpapercave.com/wp/n0FcaBH.jpg') fixed;
+background-size: cover;
+padding: 0;
+margin: 0;
+}*/
+.container-fluid {
+/*margin-bottom: 10%;*/
+}
+#cardsBottom {
+margin-bottom: 10%;
+}
+/*---------SETTING MODAL--------------*/
+.inverted.green.mini.button {
+align-content: center;
+align-items: center;
+}
+#emailSentConfirm {
+font-size: 14px;
+color: black;
+}
+#welcomeHeader {
+text-align: center;
+}
+#modalContainer {
+background-color: white;
+}
+.basic.modal.yt {
+overflow: auto
+}
+.basic.modal.nyTime {
+overflow: auto;
+}
+.basic.modal.meetup {
+overflow: auto;
+margin-bottom: 15px;
+}
+.basic.modal.twitter {
+overflow: auto;
+}
+.basic.modal.podcast {
+overflow: auto;
+}
+.basic.modal.books {
+overflow: auto;
+}
+#video-div {
+display: flex;
+justify-content: center;
+}
+.box{
+width: 100%;
+border:1px solid grey;
+border-radius: 10px;
+text-align: center;
+padding:10px;
+margin-bottom: 10px;
+}
+
+.meetupName{
+color: white;
+display: inline;
+}
+.cityMeetupContent{
+color: white;
+}
+
+/*--------------NY Time Modal--------------*/
+
+#saveIcon{
+color: red;
+}
+.large.book.icon{
+color:red;
+}
+#getNew {
+color: red;
+}
+.large.meetup.icon {
+color: red;
+}
+#ytDiv {
+color: red;
+}
+#getTwitter {
+color: red;
+}
+#getyt {
+color: red;
+}
+#saveIcon{
+color: red;
+}
+/*------Start main.html-----*/
+.podlink {
+margin-left: 10px;
+color: black;
+font-size: 14px;
+}
+#podSavedItems{
+/*	box-shadow: 2px 3px 10px grey;
+	padding:7px;
+	border-radius: 10px;*/
+}
+.podDiv{
+	box-shadow: 2px 3px 15px grey;
+	padding:7px;
+	border-radius: 10px;
+	background-color: black;
+}
+#addInterestForm {
+display: none;
+}
+#loginForm {
+display: none;
+}
+.margin-top {
+margin-top: 10px;
+}
+#mypanel {
+display: none;
+}
+#savedFavorites {
+float: right;
+}
+.bookImage:hover {
+transition: 1s;
+width: 200px;
+position: absolute;
+}
+.bookImage {
+box-shadow: 5px 5px 15px;
+/*border-radius: 2px;*/
+}
+/*meetup modal css*/
+.meetupDiv {
+margin-bottom: 30px;
+border-radius: 10px;
+padding: 30px;
+}
+
+.inverted.meetupSaveIcon {
+display: inline-flex;
+margin: 10px 5px 5px 10px;
+}
+#meetupIntro{
+font-size: 120%;
+}
+#meetupSavedItems{
+	padding:2px;
+	border-radius: 10px;
+	/*line-height: 0.7px;*/
+	/*overflow: auto;*/
+}
+.meetupDescribe{
+color: black;
+background: url("../images/pantoneCut.jpg");
+background-size: cover;
+padding:30px;
+border-radius: 15px;
+margin-top: 10px;
+font-size:17px;
+}
+/*end Meetup Modal Css*/
+/*//////////////custom scroll bar///////////////*/
+::-webkit-scrollbar {
+width: 12px;
+color: red;
+}
+::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+border-radius: 10px;
+height: 5px;
+margin-left: 2px
+}
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.twitter-timeline {
+height: 30px;
+}
+#photoCredit {
+	color: white;
+}
+@media screen and (max-width: 995px) {
+#savedFavorites {
+float: none;
+}
+}

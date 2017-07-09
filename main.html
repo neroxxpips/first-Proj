@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title>BENTO</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	<body>
+		<div class="ui container-fluid">
+			<div class="ui container">
+				<div class="ui inverted pointing secondary fixed menu">
+					<button id="flip" class="ui inverted green secondary button">My Snackables</button>
+					<button class="ui inverted green secondary button" id="logout">Log Out</button>
+					<a class="right item"></a>
+					<p class="right item" id="userName">Sign In</p>
+					<div class="ui icon input">
+						<input id="searchInput" type="text" placeholder="Chew On This!">
+						<button class="ui inverted green mini button" type="submit" id="searchSubmit"><i class="search icon"></i></button>
+						<div class="ui icon button">
+							<i class="large settings basic icon"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /SETTING modal div//////////////////////-->
+		<div class="ui container-fluid">
+			<div class="ui container">
+				<div class="ui basic modal setting">
+					<div class="three column stackable ui grid">
+						<div class="column"></div>
+						<div class="column">
+							<div class="ui segment" id="modalContainer">
+								<!-- Settings Modal -->
+								<div id="settingsModal">
+									<h2 class="ui header userSettings">
+									<label class="ui circular label"><i class="large settings basic icon"></i></label>Settings
+									</h2>
+									<div id="newUserModal">
+										<div class="ui header">
+											<h2 id="welcomeHeader">
+											Welcome to Bento!
+											</h2>
+										</div>
+										<p id="welcomeText">For best experience, tell us your favorite interest.</p>
+									</div>
+									<hr>
+									<div class="ui input">
+										<input type="text" placeholder="Choose a new interest" id="newInterestInput">
+										<button class="ui inverted mini green button" type="submit" id="newInterestSubmit"><i class="search icon"></i></button>
+									</div> <br>
+									<hr>
+									<div class="ui two top attached buttons userSettings">
+										<div class="ui compact button" id="changePassword">Change Password</div>
+										<div class="ui compact button" id="changeEmail">Change<br>Email</div>
+									</div>
+									<br>
+									<div class="ui input" id="changePasswordForm">
+										<hr>
+										<input type="email" placeholder="Your user email address" id="changePasswordInput">
+										<button class="ui inverted green mini button" type="submit" id="changePasswordSubmit"><i class="send icon"></i></button>
+									</div>
+									<div class="ui input" id="changeEmailForm">
+										<hr>
+										<input type="email" placeholder="Input new email address" id="changeEmailInput">
+										<button class="ui inverted green mini button" type="submit" id="changeEmailSubmit"><i class="checkmark icon"></i></button>
+									</div>
+									<br>
+									<p id="emailSentConfirm"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--///////////////////////////flip side bar///////////////////////////////> -->
+			<div class="ui sidebar inverted vertical menu">
+				<div class="item logo">
+					<h1>BENTO</h1>
+				</div>
+				<div class="ui inverted accordion">
+					<div class="title active">
+						<i class="dropdown icon"></i>
+						My Snackables
+					</div>
+					<div class="content active">
+						<p class="transition visible" style="display: block !important;"></p>
+						<div class="accordion transition visible" style="display: block !important;">
+							<div class="title">
+								<i class="dropdown icon"></i>
+								<i class="big youtube icon" id="saveIcon"></i> <br>
+							</div>
+							<div class="content">
+								<a class="transition hidden"><div id="ytSavedItems"></div></a>
+							</div>
+							<div class="title">
+								<i class="dropdown icon"></i>
+								<i class="big book icon" id="saveIcon"></i><br>
+							</div>
+							<div class="content">
+								<a class="transition hidden"><div id="booksSavedItems"></div></a>
+							</div>
+							<div class="title">
+								<i class="dropdown icon"></i>
+								<i class="big sound icon" id="saveIcon"></i><br>
+							</div>
+							<div class="content">
+								<a class="transition hidden"><div id="podSavedItems"></div></a>
+							</div>
+							<div class="title">
+								<i class="dropdown icon"></i>
+								<i class="big meetup icon" id="saveIcon"></i><br>
+							</div>
+							<div class="content">
+								<a class="transition hidden"><div id="meetupSavedItems"></div></a>
+							</div>
+							<div class="title">
+								<i class="big angle double up icon" id="saveIcon"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="pusher"></div> -->
+			<div data-tooltip="Enjoy the Scenery" data-position="top center">
+				<h1 id="Bento-Logo">B E N T O</h1>
+			</div>
+			<div class="ui grid">
+				<div class="sixteen wide column"></div>
+				<div class="sixteen wide column"></div>
+			</div>
+			<!-- <//////////////////////Start Cards/////////////////////////> -->
+			<div class="ui three stackable link cards sourceCards">
+				<div class="card">
+					<div class="image">
+						<img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Twitter-Desktop-Wallpaper.jpg" alt="twitter logo">
+					</div>
+					<div class="content">
+						<div class="header" id="getTwitter"><i class="large twitter icon"></i></div>
+						<div id="twitterEmbed" class="description">
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img src="https://userscontent2.emaze.com/images/68e5239d-a253-4e78-8904-ce64efb1d29b/b9aeeee7-0660-4bfc-b712-7348084617ad.jpg" alt="podcast rss logo">
+					</div>
+					<div class="content">
+						<div class="header" ><i class="large sound icon" id="saveIcon"></i></div>
+						<div class="ui basic modal podcast">
+							<i class="close icon"></i>
+							<br> <br>
+							<div id="pod-div"></div>
+						</div>
+						<div class="meta">
+							<p>“Listening to podcast, reading a book, listening to an audibook and watching films isn't waste of time. It's how somebody becomes wise!”
+								<span class="right floated"> <br> ― Deyth Banger</span></p>
+							</div>
+							<div class="description">
+								<span id="pod-nowPlaying"><h3>Your station will play here..</h3></span>
+							</div>
+							<br>
+							<div id="audioPlayer">
+							</div>
+							<br> <br> <br> <br>
+							<div class="extra content">
+								<div class="ui bottom attached inverted green fluid button" tabindex="0" id="getPodcasts">
+									Find more stations
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="image">
+							<img src="assets/images/ytwallpaper.jpg" id="ytImage" alt="YouTube logo">
+						</div>
+						<div class="content">
+							<div class="header" id="ytDiv"><i class="large youtube icon"></i></div>
+							<hr>
+							<div class="ui basic modal yt">
+								<i class="close icon"></i>
+								<div id="video-div"></div>
+							</div>
+							<div class="meta">
+								<span class="date"></span>
+							</div>
+							<br> <br> <br>
+							<div class="description" id="ytThumbnail">
+							</div>
+						</div>
+						<div class="extra content">
+							<span class="right floated">
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="ui three stackable link cards sourceCards" id="cardsBottom">
+					<div class="card">
+						<div class="image">
+							<img src="https://www.democracynow.org/images/story/49/29749/full_hd/NYTimes2.jpg" alt="New York Times Sample Article">
+						</div> <br> <br>
+						<div class="content">
+							<div class="header left floated" id="getNew"><i class="large newspaper icon"></i></div> <br>
+							<div class="ui basic modal nyTime">
+								<i class="close icon"></i>
+								<div id="nyTime-div"></div>
+							</div>
+							<div class="meta">
+								<a></a>
+							</div>
+							<br> <br>
+							<div class="description" id="nyTimeIntro">
+							</div> <br>
+							<div class="header right floated"></div>
+						</div>
+						<div class="extra content">
+							<div class="ui bottom attached inverted green fluid button" tabindex="0" id="getNews">
+								See all News
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="image">
+							<img src="https://hdwallpapersbuzz.com/wp-content/uploads/2017/04/meetup-logo-2.jpg" alt="meetup logo">
+						</div>
+						<div class="content">
+							<div class="header"><i class="large meetup icon"></i></div>
+							<div class="ui basic modal meetup">
+								<i class="close icon"></i>
+								<div id="meetup-div"></div>
+							</div>
+							<div class="meta">
+								<p>"To educate a man in mind and not in morals is to educate a menace to society." <br><span class="right floated">-Anonymous</span></p>
+							</div>
+							<div class="description">
+								<div id="meetupIntro"></div>
+							</div>
+						</div>
+						<div class="extra content">
+							<div class="ui bottom attached inverted green fluid button" tabindex="0" id="getMeetUp">
+								See your group
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="image">
+							<img src="https://cdn.taschen.com/custom/taschen/includes/phpThumb/phpThumb.php/q=70;f=png;640;/media/images/640/menu_books_1507171125_id_970319.png" alt="books on shelf">
+						</div>
+						<div class="content">
+							<div class="header"><i class="large book icon" id="saveIcon"></i></div>
+							<div class="ui basic modal books">
+								<i class="close icon"></i>
+								<div class="slider slider1">
+									<div class="slides">
+										<div id="books-div"></div>
+									</div>
+								</div>
+							</div>
+							<div class="meta">
+								<span class="date">"If we encounter a man of rare intellect, we should ask him what books he reads."</span> <br>
+								<span class="right floated">–Ralph Waldo Emerson</span> <br>
+							</div>
+							<div class="description">
+								<div id="booksIntro">
+								</div>
+							</div>
+						</div>
+						<div class="extra content">
+							<div class="ui bottom attached inverted green fluid button" tabindex="0" id="getBooks">
+								See all Books
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+			<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+			<script type="text/javascript" src="assets/javascript/project.js"></script>
+		</body>
+	</html>
